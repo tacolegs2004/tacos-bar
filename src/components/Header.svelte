@@ -1,27 +1,35 @@
 <script lang="ts">
-	export let y: number;
-
 	export let tabs = [
 		{ name: 'Home', link: '/' },
 		{ name: 'Projects', link: '#projects' },
-		{ name: 'About me', link: '#about' },
-		{ name: 'Blog', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' }
+		{ name: 'Blog', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+		{ name: 'About me', link: '#about' }
 	];
+	// $: isToggled = false;
 </script>
 
-<header class="sticky px-2 z-[10] top-4 duration-200 flex items-center justify-between">
+<header
+	class="px-2 z-[10] top-4 pb-2 pt-4 bgNav border-b-slate-800 duration-200 flex items-center justify-between"
+>
 	<div>
-		<p class="font-bold text-lg">Taco's bar</p>
+		<p class="font-bold text-lg">
+			<a href="/">Taco's bar</a>
+		</p>
 	</div>
 	<div>
-		<div class="sm:flex gap-4 hidden items-center">
+		<div class="sm:flex gap-8 hidden items-center">
 			{#each tabs as tab}
 				<a class="text-lg hover:text-violet-600 duration-200" href={tab.link}>{tab.name + ' '}</a>
 			{/each}
 		</div>
 	</div>
 	<button
-		class="bg-gradient-to-r from-violet-500 to-violet-600 cursor-auto p-2 rounded-lg text-slate-200 border-spacing-2"
+		class="bg-gradient-to-r from-violet-500 to-violet-500 hover:from-violet-300 hover:to-violet-500 cursor-auto p-2 rounded-lg text-slate-200 border-spacing-2"
 		>Get in touch</button
 	>
+	<!-- {#if isToggled === true}
+		<Form />
+	{:else}
+		{null}
+	{/if} -->
 </header>

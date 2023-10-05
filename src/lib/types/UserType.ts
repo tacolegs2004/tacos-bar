@@ -1,4 +1,4 @@
-export interface Root {
+export interface UserType {
 	login: string;
 	id: number;
 	node_id: string;
