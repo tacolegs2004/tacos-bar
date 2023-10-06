@@ -5,12 +5,10 @@
 		{ name: 'Blog', link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', id: 3 },
 		{ name: 'About me', link: '#about', id: 4 }
 	];
-
-	// $: isToggled = false;
 </script>
 
 <header
-	class=" z-[10] top-4 p-4 bgNav border-b-slate-800 duration-200 flex items-center justify-between"
+	class=" z-[10] top-4 p-2 bgNav border-b-slate-800 transition-colors duration-300 flex items-center justify-between"
 >
 	<div>
 		<p class="font-bold text-lg">
@@ -33,7 +31,7 @@
 		</div>
 	</div>
 	<button
-		class="bg-gradient-to-r from-violet-500 to-violet-500 hover:from-violet-400 hover:to-violet-600 cursor-auto p-2 rounded-lg text-slate-200 duration-200 border-spacing-2"
+		class="bg-gradient-to-r from-violet-500 to-violet-500 hover:from-violet-400 hover:to-violet-600 cursor-pointer p-2 rounded-lg text-slate-200 transition-colors duration-200 border-spacing-2"
 		>Get in touch</button
 	>
 	<!-- {#if isToggled === true}
